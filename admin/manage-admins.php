@@ -15,7 +15,7 @@
 
 					$newpass = md5($myPassword); //This will make your password encrypted into md5, a high security hash
 
-					$sql = $conn->query( "INSERT INTO tbAdministrators(first_name, last_name, email, password) VALUES ('$myFirstName','$myLastName', '$myEmail', '$newpass')" )
+					$sql = $conn->query( "INSERT INTO tbadministrators(first_name, last_name, email, password) VALUES ('$myFirstName','$myLastName', '$myEmail', '$newpass')" )
 					        or die( mysqli_error() );
 
 					die( "A new administrator account has been created." );
@@ -31,7 +31,7 @@
 
 					$newpass = md5($myPassword); //This will make your password encrypted into md5, a high security hash
 
-					$sql = $conn->query( "UPDATE tbAdministrators SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail', password='$newpass' WHERE admin_id = '$myId'" )
+					$sql = $conn->query( "UPDATE tbadministrators SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail', password='$newpass' WHERE admin_id = '$myId'" )
 					        or die( mysqli_error() );
 
 					die( "An administrator account has been updated." );

@@ -11,7 +11,7 @@ ob_start();
 session_start();
 require('../connection.php');
 
-$tbl_name="tbAdministrators"; // Table name
+$tbl_name="tbadministrators"; // Table name
 
 
 $myusername=$_POST['myusername'];

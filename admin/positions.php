@@ -6,7 +6,7 @@
 	   header("location:access-denied.php");
 	}
 	//retrive positions from the tbpositions table
-	$result = $conn->query("SELECT * FROM tbPositions")
+	$result = $conn->query("SELECT * FROM tbpositions")
 	or die("There are no records to display ... \n" . mysqli_error());
 	if (mysqli_num_rows($result)<1){
 	    $result = null;
@@ -35,7 +35,7 @@
 	 $id = $_GET['id'];
 
 	 // delete the entry
-	 $result = $conn->query("DELETE FROM tbPositions WHERE position_id='$id'")
+	 $result = $conn->query("DELETE FROM tbpositions WHERE position_id='$id'")
 	 or die("The position does not exist ... \n");
 
 	 // redirect back to positions

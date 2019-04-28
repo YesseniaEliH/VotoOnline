@@ -96,7 +96,7 @@
             </strong>
             </tr>
           <?php
-            $result = $conn->query("SELECT * FROM tbCandidates");
+            $result = $conn->query("SELECT * FROM tbcandidates");
             while ($row= mysqli_fetch_array($result)){
             echo "<tr>";
             // echo '<input name="id_candidato" type="hidden" class="form-control" value="'. $row['candidate_id'] .'">';

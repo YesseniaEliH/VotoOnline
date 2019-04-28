@@ -5,7 +5,7 @@ if (isset($_POST['Submit'])){
 
   $position = addslashes( $_POST['position'] );
 
-    $results = $conn->query("SELECT * FROM tbCandidates where candidate_position='$position'");
+    $results = $conn->query("SELECT * FROM tbcandidates where candidate_position='$position'");
 
     $row1 = mysqli_fetch_array($results); // for the first candidate
     $row2 = mysqli_fetch_array($results); // for the second candidate
@@ -24,7 +24,7 @@ if (isset($_POST['Submit'])){
 ?>
 <?php
 // retrieving positions sql query
-$positions= $conn->query("SELECT * FROM tbPositions")
+$positions= $conn->query("SELECT * FROM tbpositions")
 or die("There are no records to display ... \n" . mysqli_error());
 ?>
 <?php

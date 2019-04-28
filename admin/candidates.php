@@ -4,7 +4,7 @@
     if(empty($_SESSION['admin_id'])){
       header("location:access-denied.php");
     }
-    $result= $conn->query("SELECT * FROM tbCandidates")
+    $result= $conn->query("SELECT * FROM tbcandidates")
     or die("No hay registros que mostrar ... \n" . mysqli_error());
     if (mysqli_num_rows($result)<1){
         $result = null;
@@ -12,7 +12,7 @@
 ?>
 
 <?php
-    $positions_retrieved= $conn->query("SELECT * FROM tbPositions")
+    $positions_retrieved= $conn->query("SELECT * FROM tbpositions")
     or die("No hay registros que mostrar ... \n" . mysqli_error());
 ?>
 
@@ -24,7 +24,7 @@ if (isset($_POST['Submit']))
     $newCandidatePosition = addslashes( $_POST['position'] ); //prevents types of SQL injection
 
 
-    $sql = $conn->query( "INSERT INTO tbCandidates(candidate_name,candidate_position) VALUES ('$newCandidateName','$newCandidatePosition')" )
+    $sql = $conn->query( "INSERT INTO tbcandidates(candidate_name,candidate_position) VALUES ('$newCandidateName','$newCandidatePosition')" )
             or die("Could not insert candidate at the moment". mysqli_error() );
 
     // redirect back to candidates
@@ -41,7 +41,7 @@ if (isset($_POST['Submit']))
      $id = $_GET['id'];
 
      // delete the entry
-     $result =  $conn->query("DELETE FROM tbCandidates WHERE candidate_id='$id'")
+     $result =  $conn->query("DELETE FROMtbcandidates WHERE candidate_id='$id'")
      or die("The candidate does not exist ... \n");
 
      // redirect back to candidates

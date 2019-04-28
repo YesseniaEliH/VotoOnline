@@ -7,7 +7,7 @@
       header("location:access-denied.php");
     }
     //retrive voter details from the tbmembers table
-    $result= $conn->query("SELECT * FROM tbMembers WHERE member_id = '$_SESSION[member_id]'")
+    $result= $conn->query("SELECT * FROM tbmembers WHERE member_id = '$_SESSION[member_id]'")
     or die("There are no records to display ... \n" . mysqli_error());
     if (mysqli_num_rows($result)<1){
         $result = null;
@@ -36,7 +36,7 @@
 
         $newpass = md5($myPassword); //This will make your password encrypted into md5, a high security hash
 
-        $sql = $conn->query( "UPDATE tbMembers SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail', voter_id = '$myVoterid', password='$newpass' WHERE member_id = '$myId'" )
+        $sql = $conn->query( "UPDATE tbmembers SET first_name='$myFirstName', last_name='$myLastName', email='$myEmail', voter_id = '$myVoterid', password='$newpass' WHERE member_id = '$myId'" )
                 or die( mysqli_error() );
 
         // redirect back to profile

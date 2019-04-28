@@ -83,7 +83,7 @@
 
   		$newpass = md5($myPassword); //This will make your password encrypted into md5, a high security hash
 
-  		$sql = $conn->query( "INSERT INTO tbMembers(first_name, last_name, email, voter_id, password) VALUES ('$myFirstName','$myLastName', '$myEmail','$myVoterid', '$newpass')" )
+  		$sql = $conn->query( "INSERT INTO tbmembers(first_name, last_name, email, voter_id, password) VALUES ('$myFirstName','$myLastName', '$myEmail','$myVoterid', '$newpass')" )
   		        or die( mysqli_error() );
 
 

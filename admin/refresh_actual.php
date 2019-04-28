@@ -12,7 +12,7 @@ if (isset($_POST['Submit'])){
 ?>
 <?php
 // retrieving positions sql query
-$positions= $conn->query("SELECT * FROM tbPositions")
+$positions= $conn->query("SELECT * FROM tbpositions")
 or die("There are no records to display ... \n" . mysqli_error());
 ?>
 <?php
